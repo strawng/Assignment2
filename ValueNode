@@ -1,0 +1,65 @@
+public class ValueNode {
+    //constructor for empty node
+    public ValueNode (){
+
+    }
+    //constructor to create node with specified value
+    public ValueNode (int val) {
+        this.value = val;
+    }
+
+    //the current row
+    private MatrixRow curRow;
+    //the current column
+    private MatrixColumn curCol;
+
+    //the next ValueNode in the row
+    private ValueNode nextNodeRow;
+    //the next ValueRow in the column
+    private ValueNode nextNodeCol;
+
+    //the value at (row,column)
+    private int value;
+
+    //getters
+    public MatrixRow getCurRow () {
+        return curRow;
+    }
+
+    public MatrixColumn getCurCol() {
+        return curCol;
+    }
+
+    public ValueNode getNextNodeRow() {
+        return nextNodeRow;
+    }
+
+    public ValueNode getNextNodeCol() {
+        return nextNodeCol;
+    }
+    public int getValue() {
+        return value;
+    }
+
+    //setters
+    public void setCurRow(MatrixRow row) {
+        this.curRow = row;
+    }
+
+    public void setCurCol(MatrixColumn curCol) {
+        this.curCol = curCol;
+    }
+
+    public void setNextNodeCol(ValueNode nextCol) {
+        this.nextNodeCol = nextCol;
+    }
+
+    public void setNextRow(ValueNode nextRow) {
+        this.nextNodeRow = nextRow;
+    }
+
+    public void setValue(int val) {
+        this.value = val;
+    }
+    
+}
